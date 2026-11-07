@@ -1,0 +1,15 @@
+24-hour runs of the final settings (bot.py DEFAULTS) through sim.py, on days built from the 63 recorded real
+markets of 6 Nov 2026 placed back to back, starting at different markets. Command: python day24.py data <start> '{}'
+(results recorded with the identical settings passed explicitly before they became the defaults; start 8 re-run
+with the defaults and reproduced exactly).
+
+start 0  : QUALIFIED     | cash $8.99 | volume $1002 | cycles 101 | win rate 0.792 | max DD $7.01 | hours 21.81
+start 8  : QUALIFIED     | cash $6.37 | volume $1008 | cycles 102 | win rate 0.775 | max DD $6.85 | hours 21.81
+start 15 : QUALIFIED     | cash $4.88 | volume $1006 | cycles 103 | win rate 0.777 | max DD $6.53 | hours 21.29
+start 31 : not qualified | cash $5.71 | volume $998  | cycles 101 | win rate 0.792 | max DD $6.87
+start 47 : QUALIFIED     | cash $6.61 | volume $1007 | cycles 102 | win rate 0.794 | max DD $7.03 | hours 23.05
+start 55 : QUALIFIED     | cash $8.67 | volume $1001 | cycles 101 | win rate 0.792 | max DD $6.98 | hours 22.39
+
+Earlier default settings (edge 0.035, take profit within 1.2 cents of fair, stops at fair 0.62 / $0.90), start 0:
+           not qualified | cash $2.86 | volume $632  | cycles 68  | win rate 0.647
+House Bot v1 on the same 8.1 hours (5.2 h of usable market time): volume $119, cash $4.30, 15 cycles, 3 wins.
